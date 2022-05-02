@@ -1,0 +1,22 @@
+#Posicionado
+~/michangarrito
+
+#Generar Backup
+/var/www/michangarrito --> /home/ubuntu/backups   = /home/ubuntu/backups/michangarrito_2020-02-02
+
+#Codigo para Generar el backups
+cp -r var/www/michangarrito/ /home/ubuntu/backups/michangarrito_$(date +'%Y-%m-%d')
+
+
+#Proyecto (Desarrollo)
+/home/ubuntu/michangarrito
+
+
+#Archivos-Proyecto (Desarrollo)
+/home/ubuntu/michangarrito/dist
+
+#Destino (Producción)
+/var/www/michangarrito/dist
+
+#copiamos los archivos de desarrollo a producción de la carpeta /dist
+cp -r /home/ubuntu/michangarrito/dist /var/www/michangarrito/dist
